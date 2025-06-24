@@ -52,9 +52,17 @@ body {
 
 .navbar.scrolled {
   height: 100px;
-  backdrop-filter: blur(7px);
-  background-color: rgba(194, 196, 199, 0.69); /* Ändra färg om du vill */
+  background-color: rgba(255, 255, 255, 0.944); 
 }
+.navbar.scrolled .nav-item a {
+  color: black;
+}
+
+
+.navbar.scrolled .nav-item a::before {
+  background-color: black;
+}
+
 
 .logo img {
   width: 100px;
@@ -120,27 +128,28 @@ body {
 }
 
 
-/* === MOBILE (<768px) === */
-@media (max-width: 767px) {
+
+@media (max-width: 1024px) {
   .hamburger {
     display: block;
     z-index: 1100;
+    color: rgb(0, 0, 0);
   }
 
   .nav-menu {
     flex-direction: column;
-    background: rgb(12, 90, 133);
+    background: rgb(41, 124, 168);
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
-    height: 60vh;
+    height: 75vh;
     padding-top: 100px;
     overflow-y: auto;
     transition: top 0.3s ease;
     text-align: center;
     z-index: 1000;
-  }
+  } 
 
   .nav-menu.active {
     top: 0;
@@ -155,7 +164,7 @@ body {
   }
 
   .text-box {
-   margin-top: 20vh;
+    margin-top: 20vh;
   }
 
   .text-box h1 {
@@ -169,60 +178,32 @@ body {
   .text-box h3 {
     font-size: 1.3rem;
   }
-}
-
-/* === TABLET (768px–1024px) === */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .logo img {
-    width: 100px;
-  }
-  .text-box {
-   margin-top: 20vh;
-  }
-
-  .text-box h1 {
-    font-size: 3rem;
-  }
-
-  .text-box p {
-    font-size: 1.3rem;
-  }
-
-  .text-box h3 {
-    font-size: 1.6rem;
-  }
-}
-
-/* === DESKTOP (>1024px) === */
-@media (min-width: 1025px) {
-  .logo img {
-    width: 100px;
-  }
-
-  .nav-menu {
-    gap: 2rem;
-  }
-
   .nav-item a {
-    font-size: 1.1rem;
+    color: white !important; /* vita länkar oavsett scroll */
   }
 
-  .text-box {
-    padding: 190px 40px;
+  .nav-item a::before {
+    background-color: white !important;
   }
 
-  .text-box h1 {
-    font-size: 3rem;
+  /* Ta bort scroll-färgändring på mobil/iPad */
+  .navbar.scrolled .nav-item a {
+    color: white !important;
   }
 
-  .text-box p {
-    font-size: 1.5rem;
-  }
-
-  .text-box h3 {
-    font-size: 1.8rem;
+  .navbar.scrolled .nav-item a::before {
+    background-color: white !important;
   }
 }
+
+
+
+@media (min-width: 1440px) {
+  .text-box {
+    padding-top: 250px; /* eller testa 280px för mer luft */
+  }
+}
+
 
 /* second-section*/
 .second-section{
@@ -234,7 +215,66 @@ body {
 .second-section h1{
   font-size: 35px;
 }
-.second-section p{
+.intro-text{
   padding-top: 30px;
   color: #646464;
+  line-height: 1.6;
+}
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.text-col{
+
+  padding: 1rem;
+ 
+}
+.col {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.sec-img {
+  width: 100%;
+  height: 200px; /* eller vad som passar designen */
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+}
+.sec-img:hover{
+    transform: scale(1.05); /* Gör elementet 5% större vid hover */
+    
+
+}
+
+
+.col h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.text-col p {
+   text-align: justify;
+  font-size: 1rem;
+  color: #494949;
+  line-height: 1.6;
+}
+.cta-link{
+  cursor: pointer;
+  color: rgb(34, 102, 166);
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .columns{
+      display: grid;
+      grid-template-columns: 1fr;
+      
+    }
+    
 }
