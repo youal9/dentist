@@ -13,7 +13,7 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: url('../img/dentes.jpg') center/cover no-repeat;
+  background: url('../img/dentist2.png') center/cover no-repeat;
 }
 
 .header::before {
@@ -23,8 +23,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.338);
+  
   z-index: 1;
 }
 
