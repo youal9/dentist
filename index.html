@@ -36,42 +36,56 @@
 
   <section class="second-section">
     <h1>Välkommen till Dentist Treatment center!</h1>
-    <p>
+    <p class="intro-text">
       Vi erbjuder kompetent tandvård för vuxna. 
       Här arbetar specialisttandläkare,<br> allmäntandläkare och
-      tandhygienister tillsammans för att du ska ha en god munhälsa.
-       
+      tandhygienister tillsammansför att du ska ha en god munhälsa.<br> 
+      Oavsett om du bara vill göra en undersökning eller behöver  mer avancerad <br> behandling
+       som implantat eller kirurgi – är du i trygga händer. <br>Vi gör varje besök bekvämt och personligt, 
+       med fokus på dig och dina behov.<br>
+        För oss står du i centrum – och vi finns här för hela familjen.<br>
+        ✨ Välkommen till en klinik där tandvård känns bra på riktigt. Vi tar hand om ditt leende.
     </p>
-
+     <div class="columns">
+        <div class="col">
+           <img src="img/Tandblekning.jpg" alt="" class="sec-img" />
+              <div class="text-col">
+             <h3>Tandblekning</h3>
+          <p>Nu för tiden är det mycket vanligt och populärt att bleka 
+            tänderna och det finns flertalet olika medel att tillgå för att få vitare 
+            tänder och fräschare leende. Ring eller boka din tid online! <br>
+            <span class="cta-link">Läs mer och boka →</span>
+          </p>
+      </div>
+        </div>
+    <div class="col">
+      <img src="img/sec-dentist.jpg" alt="" class="sec-img" />
+      <div class="text-col">
+        <h3>Akutbesök</h3>
+      <p>
+        Har du akuta besvär från munnen, kan du boka en akuttid
+         hos oss så hjälper vi dig. <br> <span class="cta-link">Läs mer och boka →</span>
+      </p>
+      </div>
+      
+    </div>
+    <div class="col">
+      <img src="img/aligner-Invisalign.jpg" alt="" class="sec-img" />
+         <div class="text-col">
+        <h3>Tandställning med invisalign</h3>
+      <p>
+        Invisalign flyttar dina tänder med hjälp av genomskinliga
+        borttagbara tandskenor som är specialgjorda exakt efter dina tänder. 
+        Invisalign förvandlar ditt leende utan att störa din vardag.
+        <span class="cta-link">Läs mer och boka →</span>
+      </p>
+      </div>
+    </div>
+  </div>
   </section>
 
-  <script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
-  const menuIcon = document.getElementById("menu-icon");
-   const navbar = document.querySelector(".navbar");
+ <script src="js/index.js"></script>
 
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-
-    if (navMenu.classList.contains("active")) {
-      menuIcon.classList.remove("fa-bars");
-      menuIcon.classList.add("fa-x");
-    } else {
-      menuIcon.classList.remove("fa-x");
-      menuIcon.classList.add("fa-bars");
-    }
-  });
-   // SCROLL FÖR BG
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-</script>
 
 </body>
 </html>
