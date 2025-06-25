@@ -13,7 +13,7 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: url('../img/dentist2.png') center/cover no-repeat;
+  background: url('../img/ss.jpg') center/cover no-repeat;
 }
 
 .header::before {
@@ -52,7 +52,7 @@ body {
 
 .navbar.scrolled {
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.944); 
+  background-color: rgb(255, 255, 255); 
 }
 .navbar.scrolled .nav-item a {
   color: black;
@@ -65,7 +65,7 @@ body {
 
 
 .logo img {
-  width: 100px;
+  width: 115px;
 }
 
 .nav-menu {
