@@ -160,7 +160,7 @@ body {
   }
 
   .logo img {
-    width: 70px;
+    width: 90px;
   }
 
   .text-box {
@@ -207,10 +207,11 @@ body {
 
 /* second-section*/
 .second-section{
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
+  background-color: #f5f7fb;
 }
 .second-section h1{
   font-size: 35px;
@@ -225,6 +226,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   margin-top: 50px;
+  padding: 0 70px;
   flex-wrap: wrap;
 }
 .text-col{
@@ -269,6 +271,9 @@ body {
   cursor: pointer;
   color: rgb(34, 102, 166);
 }
+.section-title{
+  margin-top: 40px;
+}
 @media (min-width: 768px) and (max-width: 1024px){
     
     .columns{
@@ -278,3 +283,49 @@ body {
     }
     
 }
+
+/* filosofi-section*/
+.filosofi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap; /* så det funkar på mindre skärmar också */
+}
+
+.filosofi-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.filosofi-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 1% 91%);
+}
+.filosofi-col h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.filosofi-col p{
+  color: #646464;
+  text-align: justify;
+}
+@media (max-width: 1024px) {
+  .filosofi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filosofi-col {
+    width: 100%;
+  }
+
+  .filosofi-col img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
