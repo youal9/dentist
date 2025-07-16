@@ -564,3 +564,100 @@ body {
     height: 140px;
   }
 }
+
+/*kontakt-header */
+.kontakt-header {
+  height: 50vh; /* eller vad du vill */
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../img/kontakt.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+
+.center-content {
+  text-align: center;
+}
+
+.form-container{
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+}
+.contact{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact h2{
+  font-size: 36px;
+  margin-bottom: 50px;
+  
+
+}
+.contact-warpper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.contact-form{
+  text-align: left;
+}
+.contact-form h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.form-grupp{
+ margin-bottom: 20px; 
+}
+input,textarea{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+ border: none;
+ background-color: rgb(238, 238, 238);
+ color: black;
+}
+button{
+  display: inline-block;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+   background-color: rgb(28, 108, 151);
+   color: white;
+   transition: 0.3s ease;
+}
+button:hover{
+  background-color:rgb(57, 164, 222) ;
+}
+.contact-info{
+  text-align: left;
+}
+.contact-info h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+
+}
+.contact-info p{
+  font-size: 16px; 
+}
+@media screen and (max-width: 1024px) {
+  .contact-warpper {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  .form-container {
+    padding: 40px 20px;
+  }
+  .contact h2{
+    font-size:22px ;
+  }
+  iframe {
+    width: 100% !important;
+    height: 300px;
+  }
+}
