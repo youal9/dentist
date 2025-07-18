@@ -28,3 +28,8 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+
+// btn länk till kontakt)
+document.getElementById("bokaBtn").addEventListener("click",function(){
+  window.location.href="Kontakt.html";
+})

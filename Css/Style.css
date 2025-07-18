@@ -23,7 +23,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.338);
+  background-color: rgba(0, 0, 0, 0.613);
   
   z-index: 1;
 }
@@ -143,6 +143,18 @@ body {
   cursor: default;
 }
 
+.text-box .tel {
+  display: inline-block;
+  margin-right: 10px; /* Avstånd mellan knapparna */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tel:hover{
+  background-color:rgb(57, 164, 222) ;
+}
 
 
 
@@ -207,6 +219,9 @@ body {
 
   .navbar.scrolled .nav-item a::before {
     background-color: white !important;
+  }
+  .text-box .tel{
+    margin-top: 20px;
   }
 }
 
