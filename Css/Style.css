@@ -324,32 +324,44 @@ body {
 
 /* filosofi-section*/
 .filosofi {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  flex-wrap: wrap; /* så det funkar på mindre skärmar också */
+  gap: 1rem;
+  padding:  2rem;
+  text-align: center;
+  background-color: #ffffffa7;
+ 
 }
 
 .filosofi-col {
-  flex: 1;
+ 
   min-width: 300px;
 }
 
 .filosofi-col img {
-  width: 100%;
+  width: 75%;
   height: auto;
   border-radius: 8px;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 1% 91%);
+  
 }
 .filosofi-col h1{
   margin-bottom: 10px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .filosofi-col p{
   color: #646464;
   text-align: justify;
+}
+.filosofi-list{
+
+   text-align: justify;
+  padding: 15px;
+}
+.filosofi-list li{
+  margin-bottom: 15px;
+   
 }
 @media (max-width: 1024px) {
   .filosofi {
@@ -365,6 +377,16 @@ body {
     max-width: 100%;
     height: auto;
   }
+  .filosofi-col:nth-child(1) {
+  order: 2; 
+}
+
+.filosofi-col:nth-child(2) {
+  order: 1;
+}
+.filosofi-list{
+  display: none;
+}
 }
 
 /* footer*/
@@ -609,14 +631,14 @@ body {
 }
 .contact h2{
   font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   
 
 }
 .contact-warpper{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-gap: 70px;
 }
 .contact-form{
   text-align: left;
@@ -640,6 +662,7 @@ button{
   display: inline-block;
   padding: 12px 24px;
   cursor: pointer;
+  border-radius: 5px;
   border: none;
    background-color: rgb(28, 108, 151);
    color: white;
@@ -650,14 +673,16 @@ button:hover{
 }
 .contact-info{
   text-align: left;
+  
 }
-.contact-info h3{
+.contact-info h3 {
   font-size: 24px;
   margin-bottom: 20px;
 
 }
 .contact-info p{
-  font-size: 16px; 
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
   .contact-warpper {
