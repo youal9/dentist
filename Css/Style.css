@@ -52,16 +52,16 @@ body {
 
 .navbar.scrolled {
   height: 100px;
-  background-color: rgb(255, 255, 255); 
-}
-.navbar.scrolled .nav-item a {
-  color: black;
+  background: linear-gradient(90deg,#3dadd5 , #3394b7, #334465);
+  max-width: 1200px;
+  margin: 20px auto 0 auto; /* 20px från toppen, centrerad horisontellt */
+  padding: 0 2rem;
+  border-radius: 15px;
+  left: 0;
+  right: 0;
+ 
 }
 
-
-.navbar.scrolled .nav-item a::before {
-  background-color: black;
-}
 
 
 .logo img {
@@ -331,7 +331,7 @@ body {
   gap: 1rem;
   padding:  2rem;
   text-align: center;
-  background-color: #ffffffa7;
+  background-color: #b0b0b035;
  
 }
 
@@ -456,32 +456,132 @@ body {
   font-size: 2.5rem;
  
 }
-.om-oss{
-  width: 80%;
+/* --- omm-oss--- */
+.about-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf1 100%);
+}
+
+.container {
+  max-width: 1200px;
   margin: auto;
-  padding-top: 80px;
-  padding-bottom: 50px;
- 
 }
-.row{
-  display: flex;
-  gap: 5rem;
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
 }
-.about-col{
-  flex-basis: 48%;
-  padding: 30px 2px;
+
+
+.about-image-wrapper {
+  position: relative;
 }
-.about-col img{
-  width: 100%;
+
+
+
+.about-image {
+  width: 70%;
+  height: auto;
+    max-height: 500px; 
+  object-fit: cover;
+  display: block;
+  margin-left: 3rem;
 }
-.about-col h1{
-  margin-bottom: 15px;
-  font-size: 30px;
+
+
+
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-.about-col p{
-  text-align: justify;
-  color: #494949;
+
+.about-underline {
+  width: 4rem;
+  height: 0.3rem;
+  background: linear-gradient(to right,#2f75bb ,  #5799db);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
 }
+
+.about-paragraphs p {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #2f75bb;
+  border-radius: 1rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ececec;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 0.3rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-circle {
+    bottom: -1rem;
+    right: -1rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.5rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-paragraphs p {
+    font-size: 1rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .team {
   width: 100%;
   text-align: center;
@@ -549,7 +649,8 @@ body {
     width: 180px;
     height: 200px;
   }
-}
+   
+  }
 
 @media screen and (max-width: 768px) {
   .sub-header h1 {
@@ -699,5 +800,290 @@ button:hover{
   iframe {
     width: 100% !important;
     height: 300px;
+  }
+}
+
+/*pris */
+.Pris-header {
+  height: 50vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../img/dentist2.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.pris-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Header */
+.pris-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pris-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 0 auto;
+
+}
+
+/* Info banner */
+.pris-info {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  background: #e6f4f9;
+  border-left: 5px solid #0099cc;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.pris-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0077aa;
+}
+
+.pris-info ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.pris-info li {
+  margin-bottom: 0.3rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Kategori */
+.pris-kategori {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.pris-kategori h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0077aa;
+}
+
+.pris-text {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Pris grid */
+.pris-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.pris-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pris-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.pris-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pris-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Badge */
+.badge {
+  font-size: 0.75rem;
+  background: #0099cc;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+}
+
+/* Card footer */
+.pris-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pris {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0099cc;
+}
+
+/* CTA section */
+.pris-cta {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  background: linear-gradient(135deg, #0099cc, #0077aa);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+}
+
+.pris-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pris-cta p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-outline,
+.btn-outline-light {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: white;
+  color: #0099cc;
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+}
+
+.btn-outline {
+  border: 2px solid #0099cc;
+  color: #0099cc;
+}
+
+.btn-outline:hover {
+  background: #0099cc;
+  color: white;
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ------------------- Responsiv ------------------- */
+/* Tablet-liten: 1024px och mindre */
+@media screen and (max-width: 1024px) {
+  .pris-header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .pris-header p {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .pris-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .pris-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Tablet/mobil: 768px och mindre */
+@media screen and (max-width: 768px) {
+  .pris-info {
+    width: 90%;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+  }
+
+  .pris-cta {
+    width: 90%;
+    margin: 3rem auto;
+    padding: 1.5rem;
+  }
+
+  .pris-kategori {
+    padding: 0.7rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .pris-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobil: 480px och mindre */
+@media screen and (max-width: 480px) {
+  .pris-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .pris-header p,
+  .pris-text,
+  .pris-info li {
+    font-size: 0.9rem;
+  }
+
+  .pris {
+    font-size: 1.2rem;
+  }
+
+  .pris-info,
+  .pris-cta {
+    width: 95%;
+    padding: 1rem;
   }
 }
